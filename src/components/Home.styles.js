@@ -16,3 +16,16 @@ export const Content = styled.main`
   border-radius: 5px;
   background-color: white;
 `;
+
+export const Card = styled.div``;
+
+export const CardHeader = styled.h2``;
+
+export const CardBody = styled.div`
+  display: flex;
+  padding: 0.5rem;
+
+  * + * {
+    margin-left: 1rem;
+  }
+`;
