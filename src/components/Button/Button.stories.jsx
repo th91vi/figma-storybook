@@ -11,5 +11,14 @@ export default {
 export const Default = () => (
   <ThemeProvider theme={theme}>
     <Button>Button</Button>
+    <hr />
+    <Button disabled>Disabled</Button>
   </ThemeProvider>
 );
+
+Default.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/WxVFT2kaZf0LjNcAPPGG5T/storybook_components?node-id=0%3A1",
+  },
+};
