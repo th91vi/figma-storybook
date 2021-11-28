@@ -5,7 +5,7 @@ export const Button = styled.button.attrs({ type: "button" })`
   padding: 18px 36px;
   border: none;
   border-radius: 60px;
-  background-color: ${({ theme }) => `${theme.colors.app.blueDarkest}`};
+  background-color: ${({ theme }) => `${theme.colors.app.blueGem}`};
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -13,12 +13,12 @@ export const Button = styled.button.attrs({ type: "button" })`
   transition: all 0.15s;
 
   &:hover {
-    background-color: ${({ theme }) => `${theme.colors.app.blueMedium}`};
+    background-color: ${({ theme }) => `${theme.colors.app.purple}`};
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   }
 
   &:active {
-    background-color: ${({ theme }) => `${theme.colors.app.blueLightest}`};
+    background-color: ${({ theme }) => `${theme.colors.app.persianRose}`};
   }
 
   &:disabled {

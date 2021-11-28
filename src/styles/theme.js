@@ -1,11 +1,11 @@
 export const theme = {
   colors: {
     app: {
-      blueLightest: "#8ECAE6",
-      blueMedium: "#219EBC",
-      blueDarkest: "#023047",
-      yellowLightest: "#FFB703",
-      yellowDarkest: "#FFB703",
+      persianRose: "#f72585",
+      purple: "#7209b7",
+      blueGem: "#3a0ca3",
+      royalBlue: "#4361ee",
+      pictionBlue: "#4cc9f0",
     },
     status: {
       success: "#49d478",
