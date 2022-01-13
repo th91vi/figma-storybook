@@ -13,6 +13,8 @@ export const Default = () => (
     <Button>Button</Button>
     <hr />
     <Button disabled>Disabled</Button>
+    <hr />
+    <Button hasIcon>With icon</Button>
   </ThemeProvider>
 );
 

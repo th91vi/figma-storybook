@@ -34,7 +34,7 @@ export const theme = {
   border: {
     radius: {
       none: "0px",
-      sm: "32px",
+      sm: "8px",
       md: "16px",
       lg: "24px",
       pill: "500px",

@@ -10,6 +10,7 @@ export const Home = () => {
           <S.CardBody>
             <Button>Button</Button>
             <Button disabled>Disabled</Button>
+            <Button icon="#">With icon</Button>
           </S.CardBody>
         </S.Card>
       </S.Content>

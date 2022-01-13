@@ -28,10 +28,16 @@ const modifiers = {
       cursor: not-allowed;
     }
   `,
+  icon: () => css`
+    &::after {
+      content: "${({ icon }) => icon}";
+      margin-left: 24px;
+    }
+  `,
 };
 
 export const Button = styled.button.attrs({ type: "button" })`
-  ${({ theme, variant }) => css`
+  ${({ theme, variant, icon }) => css`
     display: block;
     min-width: 120px;
     padding: 16px 32px;
@@ -42,6 +48,7 @@ export const Button = styled.button.attrs({ type: "button" })`
     cursor: pointer;
     transition: all 0.15s;
 
-    ${!!variant && modifiers[variant]}
+    ${!!variant && modifiers[variant]};
+    ${!!icon && modifiers.icon};
   `}
 `;
