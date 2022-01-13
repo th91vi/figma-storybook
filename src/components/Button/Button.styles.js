@@ -1,29 +1,46 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const modifiers = {
+  primary: () => css`
+    color: ${({ theme }) => theme.color.functional.soft.lightest};
+    background-color: ${({ theme }) => theme.color.brand.primary.medium};
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-width: ${({ theme }) => theme.border.width.thin};
+    border-color: transparent;
+
+    &:hover {
+      color: ${({ theme }) => theme.color.functional.soft.medium};
+      background-color: ${({ theme }) => theme.color.brand.primary.lightest};
+      box-shadow: none;
+    }
+
+    &:active {
+      color: ${({ theme }) => theme.color.brand.primary.medium};
+      background-color: ${({ theme }) => theme.color.functional.soft.lightest};
+      border-color: ${({ theme }) => theme.color.brand.primary.medium};
+      box-shadow: none;
+    }
+
+    &:disabled {
+      color: ${({ theme }) => theme.color.functional.soft.darkest};
+      background-color: ${({ theme }) => theme.color.functional.soft.medium};
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  `,
+};
 
 export const Button = styled.button.attrs({ type: "button" })`
-  display: block;
-  padding: 18px 36px;
-  border: none;
-  border-radius: 60px;
-  background-color: ${({ theme }) => `${theme.colors.app.blueGem}`};
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: all 0.15s;
+  ${({ theme, variant }) => css`
+    display: block;
+    min-width: 120px;
+    padding: 16px 32px;
+    border-radius: ${theme.border.radius.sm};
+    font-size: ${theme.font.size.xs};
+    font-weight: ${theme.font.weight.bold};
+    cursor: pointer;
+    transition: all 0.15s;
 
-  &:hover {
-    background-color: ${({ theme }) => `${theme.colors.app.purple}`};
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-  }
-
-  &:active {
-    background-color: ${({ theme }) => `${theme.colors.app.persianRose}`};
-  }
-
-  &:disabled {
-    background-color: ${({ theme }) => `${theme.colors.status.inactive}`};
-    box-shadow: none;
-    cursor: not-allowed;
-  }
+    ${!!variant && modifiers[variant]}
+  `}
 `;

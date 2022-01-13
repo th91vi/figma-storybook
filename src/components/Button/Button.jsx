@@ -1,5 +1,7 @@
 import * as S from "./Button.styles";
 
-export const Button = (props) => {
-  return <S.Button {...props}>{props.children}</S.Button>;
-};
+export const Button = ({ children, variant = "primary", ...rest }) => (
+  <S.Button variant={variant} {...rest}>
+    {children}
+  </S.Button>
+);

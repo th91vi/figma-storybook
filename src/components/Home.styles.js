@@ -6,7 +6,7 @@ export const Layout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => `${theme.colors.app.royalBlue}`};
+  background-color: ${({ theme }) => `${theme.color.brand.secondary.dark}`};
 `;
 
 export const Content = styled.main`
