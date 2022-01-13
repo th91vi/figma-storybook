@@ -63,5 +63,11 @@ export const theme = {
       light: 200,
       bold: 500,
     },
+    family: {
+      primary:
+        "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      secondary:
+        "Roboto, Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    },
   },
 };
