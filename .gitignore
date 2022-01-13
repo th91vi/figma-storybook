@@ -24,5 +24,8 @@ yarn-error.log*
 
 #deploy
 aws
-storybook-static
 awscliv2.zip
+
+# storybook
+build-storybook.log
+storybook-static

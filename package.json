@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "yarn build-storybook && storybook-to-aws-s3 --bucket-path=poc-figma-storybook --aws-profile=default"
+    "deploy-storybook": "yarn build-storybook && storybook-to-aws-s3 --bucket-path=poc-figma-storybook --aws-profile=default",
+    "chromatic": "npx chromatic --project-token=d42675ba911d"
   },
   "eslintConfig": {
     "extends": [
