@@ -41,7 +41,7 @@ export const Button = styled.button.attrs({ type: "button" })`
     display: block;
     min-width: 120px;
     padding: 16px 32px;
-    border-radius: ${theme.border.radius.circular};
+    border-radius: ${theme.border.radius.sm};
     font-size: ${theme.font.size.xs};
     font-weight: ${theme.font.weight.bold};
     font-family: ${theme.font.family.secondary};
