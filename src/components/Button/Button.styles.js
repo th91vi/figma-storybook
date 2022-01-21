@@ -35,10 +35,10 @@ const modifiers = {
 
     svg {
       width: 16px;
+    }
 
-      span + & {
-        margin-left: ${theme.color.functional.soft.medium};
-      }
+    span + svg {
+      margin-left: ${theme.spacings.xxs};
     }
   `,
 };
