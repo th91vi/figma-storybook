@@ -23,6 +23,8 @@ export const CardHeader = styled.h2``;
 
 export const CardBody = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  row-gap: ${({ theme }) => `${theme.spacings.xxs}`};
   padding: 0.5rem;
 
   * + * {

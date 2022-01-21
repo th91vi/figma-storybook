@@ -1,37 +1,44 @@
 import styled, { css } from "styled-components";
 
 const modifiers = {
-  primary: () => css`
-    color: ${({ theme }) => theme.color.functional.soft.lightest};
-    background-color: ${({ theme }) => theme.color.brand.primary.medium};
+  primary: (theme) => css`
+    color: ${theme.color.functional.soft.lightest};
+    background-color: ${theme.color.brand.primary.medium};
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-    border-width: ${({ theme }) => theme.border.width.thin};
+    border-width: ${theme.border.width.thin};
     border-color: transparent;
 
     &:hover {
-      color: ${({ theme }) => theme.color.functional.soft.medium};
-      background-color: ${({ theme }) => theme.color.brand.primary.lightest};
+      color: ${theme.color.functional.soft.medium};
+      background-color: ${theme.color.brand.primary.lightest};
       box-shadow: none;
     }
 
     &:active {
-      color: ${({ theme }) => theme.color.brand.primary.medium};
-      background-color: ${({ theme }) => theme.color.functional.soft.lightest};
-      border-color: ${({ theme }) => theme.color.brand.primary.medium};
+      color: ${theme.color.brand.primary.medium};
+      background-color: ${theme.color.functional.soft.lightest};
+      border-color: ${theme.color.brand.primary.medium};
       box-shadow: none;
     }
 
     &:disabled {
-      color: ${({ theme }) => theme.color.functional.soft.darkest};
-      background-color: ${({ theme }) => theme.color.functional.soft.medium};
+      color: ${theme.color.functional.soft.darkest};
+      background-color: ${theme.color.functional.soft.medium};
       box-shadow: none;
       cursor: not-allowed;
     }
   `,
-  icon: () => css`
-    &::after {
-      content: "${({ icon }) => icon}";
-      margin-left: 24px;
+  icon: (theme) => css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 16px;
+
+      span + & {
+        margin-left: ${theme.color.functional.soft.medium};
+      }
     }
   `,
 };
@@ -48,7 +55,7 @@ export const Button = styled.button.attrs({ type: "button" })`
     cursor: pointer;
     transition: all 0.15s;
 
-    ${!!variant && modifiers[variant]};
-    ${!!icon && modifiers.icon};
+    ${!!variant && modifiers[variant](theme)};
+    ${!!icon && modifiers.icon(theme)};
   `}
 `;
