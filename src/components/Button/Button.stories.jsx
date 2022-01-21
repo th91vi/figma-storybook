@@ -1,5 +1,11 @@
 import React from "react";
 import { Button } from ".";
+import {
+  AddShoppingCart,
+  AccessAlarm,
+  Backpack,
+  Facebook,
+} from "@styled-icons/material-outlined";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../styles/theme";
 
@@ -14,7 +20,13 @@ export const Default = () => (
     <hr />
     <Button disabled>Disabled</Button>
     <hr />
-    <Button hasIcon>With icon</Button>
+    <Button icon={<AddShoppingCart />}>Add to shopping cart</Button>
+    <hr />
+    <Button icon={<AccessAlarm />}>Alarm</Button>
+    <hr />
+    <Button icon={<Backpack />}>Back pack</Button>
+    <hr />
+    <Button icon={<Facebook />}>Share to Facebook</Button>
   </ThemeProvider>
 );
 

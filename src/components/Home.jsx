@@ -1,5 +1,11 @@
 import * as S from "./Home.styles";
 import { Button } from "./Button";
+import {
+  AddShoppingCart,
+  AccessAlarm,
+  Backpack,
+  Facebook,
+} from "@styled-icons/material-outlined";
 
 export const Home = () => {
   return (
@@ -10,7 +16,10 @@ export const Home = () => {
           <S.CardBody>
             <Button>Button</Button>
             <Button disabled>Disabled</Button>
-            <Button icon="#">With icon</Button>
+            <Button icon={<AddShoppingCart />}>Add to shopping cart</Button>
+            <Button icon={<AccessAlarm />}>Alarm</Button>
+            <Button icon={<Backpack />}>Back pack</Button>
+            <Button icon={<Facebook />}>Share to Facebook</Button>
           </S.CardBody>
         </S.Card>
       </S.Content>

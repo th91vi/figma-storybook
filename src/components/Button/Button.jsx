@@ -4,9 +4,10 @@ export const Button = ({
   children,
   variant = "primary",
   icon = false,
-  ...rest
+  ...props
 }) => (
-  <S.Button variant={variant} icon={icon} {...rest}>
-    {children}
+  <S.Button variant={variant} icon={icon} {...props}>
+    {!!children && <span>{children}</span>}
+    {!!icon && icon}
   </S.Button>
 );
